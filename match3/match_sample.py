@@ -705,8 +705,7 @@ class App:
             self.next_state(State.NO_MORE_MOVE, 30)
 
     def func_no_more_move(self) :
-        self.top_text += f"   No more move"
-
+        self.set_center_texts(["No more move"], 7)
         for x in range(App.BOX_WIDTH):
             for y in range(App.BOX_HEIGHT):
                 self.box[x][y].dst_y = App.SCREEN_HEIGHT
@@ -716,7 +715,6 @@ class App:
             self.next_state(State.SELECT)
 
     def func_gameover(self) :
-        print(f"del = {Debug.delete_count}, extend = {Debug.extend_val}")
         pyxel.stop()
         self.se.gameover()
         for x in range(App.BOX_WIDTH):
@@ -775,10 +773,10 @@ class App:
         if self.state == State.TITLE :
             self.draw_center_texts(App.SCREEN_HEIGHT//2 - 16)
             self.draw_title_box()
-
         elif self.state == State.NO_MORE_MOVE:
             self.draw_box()
             self.gage.draw()
+            self.draw_center_texts(App.SCREEN_HEIGHT//2 - 16)
             self.draw_score()
         elif self.state == State.WAIT_RESTART :
             self.draw_box()
