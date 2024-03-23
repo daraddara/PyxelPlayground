@@ -117,14 +117,14 @@ class SoundEffect:
         self.init_sound()
 
     def init_sound(self):
-        pyxel.sound(0).set("b-2", "s", "3", "n", 30)
-        pyxel.sound(1).set("c3", "s", "3", "n", 30)
-        pyxel.sound(2).set("d3", "s", "3", "n", 30)
-        pyxel.sound(3).set("e-3", "s", "3", "n", 30)
-        pyxel.sound(4).set("f3", "s", "4", "n", 30)
-        pyxel.sound(5).set("g3", "s", "4", "n", 30)
-        pyxel.sound(6).set("a3", "s", "4", "n", 30)
-        pyxel.sound(7).set("b-3", "s", "5", "n", 30)
+        pyxel.sounds[0].set("b-2", "s", "3", "n", 30)
+        pyxel.sounds[1].set("c3", "s", "3", "n", 30)
+        pyxel.sounds[2].set("d3", "s", "3", "n", 30)
+        pyxel.sounds[3].set("e-3", "s", "3", "n", 30)
+        pyxel.sounds[4].set("f3", "s", "4", "n", 30)
+        pyxel.sounds[5].set("g3", "s", "4", "n", 30)
+        pyxel.sounds[6].set("a3", "s", "4", "n", 30)
+        pyxel.sounds[7].set("b-3", "s", "5", "n", 30)
         self.test_play_start = False
         self.test_sound_no = 0
 
