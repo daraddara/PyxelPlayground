@@ -236,7 +236,7 @@ class App:
 
         pyxel.init(App.SCREEN_WIDTH, App.SCREEN_HEIGHT, title=App.TITLE, fps=App.FPS)
 
-        pyxel.load("match_resource.pyxres", image=True, sound=True, music=True)
+        pyxel.load("match_resource.pyxres")
 
         self.se = SoundEffect(3)
 
