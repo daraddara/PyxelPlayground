@@ -282,10 +282,9 @@ class App:
 
 
     def change_fast_bgm(self):
-        (sound, note) = pyxel.play_pos(0)
+        (sound, sec) = pyxel.play_pos(0)
         pyxel.stop()
-        tick = sound * 32 + note
-        pyxel.playm(1, tick=tick, loop=True)
+        pyxel.playm(1, sec=sec/3, loop=True)
         self.fast_bgm = True
 
     def update_game_timer(self) :
